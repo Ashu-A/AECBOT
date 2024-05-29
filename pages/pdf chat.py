@@ -100,3 +100,10 @@ def main():
 
 if __name__ == '__main__':
     main()
+# Footer
+st.markdown(
+    """
+    ---
+    Made with ❤️ by [Ashish](https://ashu-a.github.io/Ashish_portfolio/) 
+    """
+)

@@ -71,6 +71,6 @@ st.write("Deflection Check:", deflection_check(allowable_deflection, applied_loa
 st.markdown(
     """
     ---
-    Made with ❤️ by Island Team
+    Made with ❤️ by [Ashish](https://ashu-a.github.io/ashish_ranjan/)
     """
 )

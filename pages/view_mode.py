@@ -104,6 +104,6 @@ with report:
 st.markdown(
     """
     ---
-    Made with ❤️ by Island Team 
+    Made with ❤️ by [Ashish](https://ashu-a.github.io/Ashish_portfolio/) 
     """
 )

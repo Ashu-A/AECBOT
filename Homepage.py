@@ -40,6 +40,17 @@ with faq_expander:
     4. SEPI will now display the model based on your selections.
     """)
 
+faq_expander = st.expander("How to Extract Data and Chat with It?")
+with faq_expander:
+    st.write("""
+    1. Input your Speckle token.
+    2. Choose your desired Speckle stream from the dropdown.
+    3. Pick the branch from which you want to extract data.
+    4. Choose the main category, select parameters, and click "Run".
+    5. Download the extracted data in Excel format.
+    6. Enter your query in the query box and click "Send" to get insights from the data.
+    """)
+
 # Footer
 st.markdown(
     """

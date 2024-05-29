@@ -55,6 +55,6 @@ with faq_expander:
 st.markdown(
     """
     ---
-    Made with ❤️ by [Ashish](https://ashu-a.github.io/ashish_ranjan/)
+    Made with ❤️ by [Ashish](https://ashu-a.github.io/Ashish_portfolio/)
     """
 )

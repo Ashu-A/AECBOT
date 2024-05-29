@@ -86,6 +86,6 @@ elif calculation_choice == "Deflection Check":
 st.markdown(
     """
     ---
-    Made with ❤️ by [Ashish](https://ashu-a.github.io/Ashish_portfolio/)
+    Made with ❤️ by [Ashish Ranjan](https://ashu-a.github.io/Ashish_portfolio/)
     """
 )

@@ -25,14 +25,20 @@ with faq_expander:
 faq_expander = st.expander("How to Use the PDF Chat Page?")
 with faq_expander:
     st.write("""
-    If you encounter any issues, try the following steps:
     1. Go to the PDF Chat option in the sidebar.
     2. In the sidebar, use the "Browse File" option to select the documents you want to add.
     3. After selecting the documents, click the "Process" button.
     4. Wait for the loader to stop. This may take some time.
     5. Once the loader stops, you can start adding your prompt to get data from the SEPI.
     """)
-
+faq_expander = st.expander("How to View the Model?")
+with faq_expander:
+    st.write("""
+    1. First, enter your Speckle token.
+    2. A dropdown will appear with all the Speckle streams connected to your token. Select your preferred Speckle stream from the dropdown.
+    3. Another dropdown will appear with all the branches of the selected stream. Choose the branch you want to view.
+    4. SEPI will now display the model based on your selections.
+    """)
 
 # Footer
 st.markdown(

@@ -13,7 +13,7 @@ with header:
 faq_expander = st.expander("How to create a speckle token?")
 with faq_expander:
     st.write("""
-    To add a model on Speckle, follow these steps:
+    To create Speckle Token, follow these steps:
     1. Log into your Speckle account and go to your profile page at /profile..
     2. Scroll down to the "Your Apps" section to see your personal access tokens.
     3. Click the "New Token" button. A dialog box will appear.
@@ -21,6 +21,19 @@ with faq_expander:
     5. Create the token. The dialog will display the token once. Copy it and store it securely.
     For more visit [Speckle](https://speckle.guide/dev/tokens.html)
     """)
+
+faq_expander = st.expander("How to Use the PDF Chat Page?")
+with faq_expander:
+    st.write("""
+    If you encounter any issues, try the following steps:
+    1. Go to the PDF Chat option in the sidebar.
+    2. In the sidebar, use the "Browse File" option to select the documents you want to add.
+    3. After selecting the documents, click the "Process" button.
+    4. Wait for the loader to stop. This may take some time.
+    5. Once the loader stops, you can start adding your prompt to get data from the SEPI.
+    """)
+
+
 # Footer
 st.markdown(
     """

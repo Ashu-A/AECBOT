@@ -11,12 +11,12 @@ import os
 from specklepy.api.credentials import get_default_account, get_local_accounts
 
 st.set_page_config(
-    page_title="Island Chatbot",
+    page_title="AEC Chatbot",
     page_icon="🏝️",
 )
 header = st.container()
 with header:
-    st.title('Island Chatbot')
+    st.title('AEC Chatbot')
     st.info('Page under development')
 
 # Load the .env file

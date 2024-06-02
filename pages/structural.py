@@ -1,12 +1,12 @@
 import streamlit as st
 st.set_page_config(
-    page_title="Island Chatbot",
+    page_title="AEC Chatbot",
     page_icon="🏝️",
 )
 header = st.container()
 with header:
-    st.title('Island Chatbot')
-    st.info('Hi I am SEPI a virtual assistant for Island Team')
+    st.title('AEC Chatbot')
+    st.info('Hi I am SEPI a virtual assistant for AEC professionals')
 
 def strength_check():
     st.subheader("Strength Check")

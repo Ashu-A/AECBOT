@@ -6,8 +6,8 @@ st.set_page_config(
 )
 header = st.container()
 with header:
-    st.title('Island Chatbot')
-    st.info('Hi I am SEPI a virtual assistant for Island Team.')
+    st.title('AEC Chatbot')
+    st.info('Hi I am SEPI a virtual assistant for AEC professionals')
 
 def strength_check(allowable_stress, applied_load, area):
     # Calculation

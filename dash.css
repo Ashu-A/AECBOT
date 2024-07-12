@@ -1,0 +1,48 @@
+/* styles.css */
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Box styles */
+.rain-box, .sound-box, .soil-box {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.rain-detected {
+    background-color: red;
+    color: white;
+}
+
+.no-rain, .low-sound, .wet-soil {
+    background-color: green;
+    color: white;
+}
+
+.normal-sound, .normal-soil {
+    background-color: yellow;
+    color: black;
+}
+
+.high-sound, .dry-soil {
+    background-color: red;
+    color: white;
+}

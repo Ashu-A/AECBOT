@@ -3,14 +3,18 @@ import requests
 import time
 from datetime import datetime
 import pytz
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Adafruit IO credentials
-ADAFRUIT_AIO_USERNAME = "ashishranjan"
-ADAFRUIT_AIO_KEY = "aio_xHiI051uFcRvLFdia5WQOs5MZLuw"
+ADAFRUIT_AIO_USERNAME = os.getenv("ADAFRUIT_AIO_USERNAME")
+ADAFRUIT_AIO_KEY = os.getenv("ADAFRUIT_AIO_KEY")
 
 # London timezone
 london_tz = pytz.timezone('Europe/London')
-
 
 # Function to fetch last value from Adafruit IO feed
 def fetch_last_value(feed_key):
@@ -33,7 +37,6 @@ def fetch_last_value(feed_key):
         st.error(f"Failed to fetch data from feed {feed_key}, status code: {response.status_code}")
         return None, None
 
-
 # Define feed keys and names
 feeds = [
     {"name": "humidity", "key": "humidity"},
@@ -43,7 +46,6 @@ feeds = [
     {"name": "sound", "key": "sound"},
     {"name": "temperature", "key": "temperature"}
 ]
-
 
 # Function to periodically update data
 def update_data():
@@ -58,12 +60,10 @@ def update_data():
         })
     return updated_data
 
-
 # Function to load HTML and CSS files
 def load_file(file_path):
     with open(file_path, 'r') as file:
         return file.read()
-
 
 # Function to generate HTML table rows
 def generate_table_rows(data):
@@ -79,14 +79,12 @@ def generate_table_rows(data):
         """
     return rows_html
 
-
 # Function to generate rain status
 def generate_rain_status(raindrop_value):
     if raindrop_value is not None and float(raindrop_value) < 500:
         return '<div id="rain-box" class="rain-box rain-detected">Rain detected</div>'
     else:
         return '<div id="rain-box" class="rain-box no-rain">No rain</div>'
-
 
 # Function to generate sound status
 def generate_sound_status(sound_value):
@@ -101,7 +99,6 @@ def generate_sound_status(sound_value):
     else:
         return '<div id="sound-box" class="sound-box">No data</div>'
 
-
 # Function to generate soil moisture status
 def generate_soil_moisture_status(moisture_value):
     if moisture_value is not None:
@@ -114,7 +111,6 @@ def generate_soil_moisture_status(moisture_value):
             return '<div id="soil-box" class="soil-box normal-soil">Normal soil moisture</div>'
     else:
         return '<div id="soil-box" class="soil-box">No data</div>'
-
 
 # Function to display dashboard
 def main():
@@ -170,8 +166,7 @@ def main():
         # Extract updated values for rain, sound, and soil moisture
         raindrop_value = next((entry['Last value'] for entry in updated_data if entry['Key'] == 'raindrop'), None)
         sound_value = next((entry['Last value'] for entry in updated_data if entry['Key'] == 'sound'), None)
-        soil_moisture_value = next((entry['Last value'] for entry in updated_data if entry['Key'] == 'soil-moisture'),
-                                   None)
+        soil_moisture_value = next((entry['Last value'] for entry in updated_data if entry['Key'] == 'soil-moisture'), None)
 
         updated_rain_status = generate_rain_status(raindrop_value)
         updated_sound_status = generate_sound_status(sound_value)
@@ -189,7 +184,6 @@ def main():
 
         soil_box_container.empty()
         soil_box_container.html(f"<style>{styles_css}</style>{updated_soil_moisture_status}")
-
 
 if __name__ == "__main__":
     main()

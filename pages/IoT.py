@@ -6,7 +6,7 @@ import pytz
 
 # Adafruit IO credentials
 ADAFRUIT_AIO_USERNAME = "ashishranjan"
-ADAFRUIT_AIO_KEY = "aio_OUTy125uxd1anu6r9kW8Q4X51wGaa"
+ADAFRUIT_AIO_KEY = "aio_xHiI051uFcRvLFdia5WQOs5MZLuw"
 
 # London timezone
 london_tz = pytz.timezone('Europe/London')
